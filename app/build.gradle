@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.androidbarberbookingapp"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-firestore:21.5.0'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    //frm tuto-2
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+
+    //frm tuto-3
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //frm tuto-4
+    implementation 'com.shuhart.stepview:stepview:1.4.0'
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+
+    //frm tuto-6
+    implementation 'devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4'
+
+    //frm tuto-8
+    implementation 'com.karumi:dexter:5.0.0'
+
+    //frm tuto-9
+    implementation 'io.paperdb:paperdb:2.6'
+
+    //frm tuto-11
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+    implementation 'com.nex3z:notification-badge:1.0.2'
+
+    //frm tuto-18
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+
+    //frm tuto-27
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //frm tuto-32
+    implementation 'com.firebaseui:firebase-ui-auth:5.1.0'
+}
